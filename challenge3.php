@@ -25,13 +25,14 @@
 
     if($friend['money'] > 100){
 
-    echo $friend['name'] . "<br>";
-
-    }
+    echo $friend['name'] . " owes more than 100 DH : " . $friend['money'] . " DH<br>";
 
     }
     
-    echo "The total is : " . $somme . "DH" ;
+    }
+    echo "Total owed: : " . $somme . "DH <BR>" ;
+
+
     ?>
 </body>
 </html>
