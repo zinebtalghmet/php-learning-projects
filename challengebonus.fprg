@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="challengebonus"/>
+        <attribute name="authors" value="PC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-05 11:34:04 "/>
+        <attribute name="created" value="UEM7REVTS1RPUC1NMlJCTFU1OzIwMjYtMDMtMDU7IjExOjA4OjU1ICI7MjQxMg=="/>
+        <attribute name="edited" value="UEM7REVTS1RPUC1NMlJCTFU1OzIwMjYtMDMtMDU7IjExOjM0OjA0ICI7MTsyNTEz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <input variable="age"/>
+            <declare name="price" type="Integer" array="False" size=""/>
+            <if expression="age &lt; 12">
+                <then>
+                    <assign variable="price" expression="20"/>
+                    <output expression="&quot;Special: Children's Menu included!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="age &gt;= 12 AND age &gt;= 18">
+                        <then>
+                            <assign variable="price" expression="40"/>
+                        </then>
+                        <else>
+                            <if expression="age &gt; 60">
+                                <then>
+                                    <assign variable="price" expression="30"/>
+                                </then>
+                                <else>
+                                    <assign variable="price" expression="60"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Le prix de ticket est &quot; &amp;price" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
