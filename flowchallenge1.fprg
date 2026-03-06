@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="flowchallenge1"/>
+        <attribute name="authors" value="PC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-06 10:37:26 "/>
+        <attribute name="created" value="UEM7REVTS1RPUC1NMlJCTFU1OzIwMjYtMDMtMDY7IjA5OjM3OjQzICI7MjQxOQ=="/>
+        <attribute name="edited" value="UEM7REVTS1RPUC1NMlJCTFU1OzIwMjYtMDMtMDY7IjEwOjM3OjI2ICI7MTsyNTIw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="student" type="Boolean" array="False" size=""/>
+            <output expression="&quot;are you student?&quot;" newline="True"/>
+            <input variable="student"/>
+            <declare name="teaprice" type="Integer" array="False" size=""/>
+            <assign variable="teaprice" expression="5"/>
+            <declare name="numcup" type="Integer" array="False" size=""/>
+            <output expression="&quot;how much of cup u need?&quot;" newline="True"/>
+            <input variable="numcup"/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <assign variable="total" expression="teaprice * numcup"/>
+            <if expression="numcup&gt;5">
+                <then>
+                    <assign variable="total" expression="total * 0.8"/>
+                    <if expression="student == True">
+                        <then>
+                            <assign variable="total" expression="total - numcup"/>
+                            <output expression="&quot;The total is :&quot; &amp;total&amp; &quot;DH&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
