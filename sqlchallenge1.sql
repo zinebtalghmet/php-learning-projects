@@ -26,3 +26,4 @@ SELECT * FROM library_books WHERE title LIKE '%PHP%';
 SELECT * FROM library_books WHERE status != 'Lost' ORDER BY published_year DESC;
 SELECT DISTINCT author FROM library_books;
 SELECT UPPER(title), ROUND(price,0) FROM library_books;
+
